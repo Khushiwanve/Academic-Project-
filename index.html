@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishi Mitra — Smart Farming Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- INDIA STRIP -->
+<div class="india-strip"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="logo-icon">🌾</span>
+      <div class="logo-text">
+        <span class="logo-name">Krishi Mitra</span>
+        <span class="logo-hindi">कृषि मित्र</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#products" class="nav-link">Products</a></li>
+      <li><a href="#guidance" class="nav-link">Crop Guidance</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="cart-btn" id="cart-btn" onclick="openCart()">
+        <span>🛒</span>
+        <span>Cart</span>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">🇮🇳 Trusted by Farmers Across India</div>
+      <h1 class="hero-title">Smart Farming Solutions<br><span class="hero-title-accent">for Modern Farmers</span></h1>
+      <p class="hero-subtitle">Premium agricultural products, expert crop guidance and proven farming support — all in one place.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">Shop Now →</a>
+        <a href="#guidance" class="btn-outline">Explore Crop Guide</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="stat-num">10K+</span><span class="stat-label">Farmers</span></div>
+        <div class="hero-stat"><span class="stat-num">500+</span><span class="stat-label">Products</span></div>
+        <div class="hero-stat"><span class="stat-num">4.9★</span><span class="stat-label">Rating</span></div>
+        <div class="hero-stat"><span class="stat-num">50+</span><span class="stat-label">Experts</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-glow"></div>
+      <div class="hero-card-main">
+        <div class="hcard-icon">🌾</div>
+        <div class="hcard-title">Krishi Mitra</div>
+        <div class="hcard-sub">कृषि मित्र</div>
+        <div class="hcard-grid">
+          <div class="hcard-item"><span>🌱</span><span>Seeds</span></div>
+          <div class="hcard-item"><span>🧪</span><span>Fertilizers</span></div>
+          <div class="hcard-item"><span>🌿</span><span>Organic</span></div>
+          <div class="hcard-item"><span>🚜</span><span>Equipment</span></div>
+        </div>
+        <div class="hcard-badge">✓ COD Available Pan-India</div>
+      </div>
+      <div class="hero-floating hero-f1">🌱 Seeds Ready</div>
+      <div class="hero-floating hero-f2">📦 Fast Delivery</div>
+      <div class="hero-floating hero-f3">⭐ 4.9 Rated</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">Everything a Farmer Needs</h2>
+      <p class="section-desc">From seeds to harvest — Krishi Mitra supports every step of your farming journey.</p>
+    </div>
+    <div class="features-grid" id="features-grid"></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Our Products</span>
+      <h2 class="section-title">Premium Agri Products</h2>
+      <p class="section-desc">Sourced from certified suppliers, tested for Indian soil and climate conditions.</p>
+    </div>
+    <div class="products-toolbar">
+      <div class="filter-bar" id="filter-bar"></div>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search products…" />
+      </div>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+    <div class="no-products hidden" id="no-products">
+      <span>😔</span>
+      <p>No products found. Try a different search.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CROP GUIDANCE -->
+<section class="guidance-section" id="guidance">
+  <div class="guidance-overlay"></div>
+  <div class="section-inner">
+    <div class="section-header guidance-header">
+      <span class="section-tag guidance-tag">Crop Guidance Center</span>
+      <h2 class="section-title" style="color:#fff;">Expert Crop Growing Guides</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,.72);">Click any crop card for detailed growing tips, soil prep, fertilizer schedule and disease management.</p>
+    </div>
+    <div class="guidance-grid" id="guidance-grid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Farmer Reviews</span>
+      <h2 class="section-title">What Farmers Say</h2>
+      <p class="section-desc">Real reviews from real farmers using Krishi Mitra products across India.</p>
+    </div>
+    <div class="rating-summary" id="rating-summary"></div>
+    <div class="review-form-wrap">
+      <h3 class="form-title">✍️ Share Your Experience</h3>
+      <form class="review-form" id="review-form" onsubmit="submitReview(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name *</label>
+            <input type="text" id="r-name" placeholder="e.g. Ramesh Kumar" required />
+          </div>
+          <div class="form-group">
+            <label>Location *</label>
+            <input type="text" id="r-location" placeholder="e.g. Pune, Maharashtra" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Product Used *</label>
+            <select id="r-product" required>
+              <option value="">Select product…</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Crop</label>
+            <input type="text" id="r-crop" placeholder="e.g. Wheat" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Rating *</label>
+          <div class="star-picker" id="star-picker">
+            <span data-val="1">★</span>
+            <span data-val="2">★</span>
+            <span data-val="3">★</span>
+            <span data-val="4">★</span>
+            <span data-val="5">★</span>
+          </div>
+          <input type="hidden" id="r-rating" value="0" />
+        </div>
+        <div class="form-group">
+          <label>Your Review *</label>
+          <textarea id="r-text" rows="4" placeholder="Share your experience with this product…" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Submit Review</button>
+      </form>
+    </div>
+    <div class="reviews-grid" id="reviews-grid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Contact Us</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-desc">Have questions about a product or need farming advice? We're here 7 days a week.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="cc-icon">📞</div>
+          <div class="cc-body">
+            <div class="cc-title">Phone</div>
+            <div class="cc-val">1800-XXX-XXXX (Toll Free)</div>
+            <div class="cc-val">+91 98765 43210</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">✉️</div>
+          <div class="cc-body">
+            <div class="cc-title">Email</div>
+            <div class="cc-val">support@krishimitra.in</div>
+            <div class="cc-val">orders@krishimitra.in</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">📍</div>
+          <div class="cc-body">
+            <div class="cc-title">Head Office</div>
+            <div class="cc-val">Agri Hub, Sector 12</div>
+            <div class="cc-val">Pune, Maharashtra – 411001</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">🕐</div>
+          <div class="cc-body">
+            <div class="cc-title">Working Hours</div>
+            <div class="cc-val">Mon–Sat: 8 AM – 8 PM</div>
+            <div class="cc-val">Sun: 9 AM – 5 PM</div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="submitContact(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@email.com" required />
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="How can we help?" required />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Describe your query…" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="section-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🌾 Krishi Mitra</div>
+        <div class="footer-logo-hindi">कृषि मित्र</div>
+        <p>Empowering Indian farmers with premium agri-products, expert guidance and community support since 2019.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="YouTube">📺</a>
+          <a href="#" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#guidance">Crop Guide</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="#products">Seeds</a>
+        <a href="#products">Fertilizers</a>
+        <a href="#products">Organic</a>
+        <a href="#products">Protection</a>
+        <a href="#products">Equipment</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Track Order</a>
+        <a href="#">Return Policy</a>
+        <a href="#">FAQ</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Krishi Mitra. All rights reserved. Made with ❤️ for Indian farmers.</p>
+      <div class="india-badge">🇮🇳 Proudly Made in India</div>
+    </div>
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay" id="product-modal" onclick="closeProductModal(event)">
+  <div class="modal-box" id="product-modal-box"></div>
+</div>
+
+<!-- CROP MODAL -->
+<div class="modal-overlay" id="crop-modal" onclick="closeCropModal(event)">
+  <div class="modal-box" id="crop-modal-box"></div>
+</div>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-head">
+    <h3>🛒 Your Cart</h3>
+    <button onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-foot" id="cart-foot"></div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
