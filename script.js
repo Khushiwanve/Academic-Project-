@@ -9,7 +9,7 @@
 
 const  = products [
 {
-id:1,
+id:,
 name:"Premium Wheat Seeds",
 category:"Seeds",
 icon:"🌾",
