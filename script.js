@@ -7,7 +7,7 @@
    DATA
 ===================================================== */
 
-const products = [
+const  = [
 {
 id:1,
 name:"Premium Wheat Seeds",
